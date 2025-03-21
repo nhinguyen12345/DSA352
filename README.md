@@ -1,0 +1,3 @@
+# DSA352
+(Instead of Word, I'll write my paragraphs in here)
+After one round, contestants are moved at random. moving through the list, contestants get moved to first [0] if answer the question right(depends on coin flip) and move to last position [contestant.size()-1] if answer question wrong (coin flip). I know my code worked perfectly because there was no bugs (I have vision issue so there might have been a typo here and there but the program ran and no bugs were annouced so I believe it worked), and I printed the initial positions to compare them to the after 1 round positions, since they are very different, my code worked. 
