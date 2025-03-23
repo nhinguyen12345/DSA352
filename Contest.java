@@ -50,7 +50,7 @@ class Contestant extends Person{
         this.position = 0;
     }
 }
-/*public class Contest {
+public class Contest {
     
     public static boolean flipCoin() {
         // Create a Random object to generate random values
@@ -62,7 +62,7 @@ class Contestant extends Person{
         // If the result is 0, return false (tails), otherwise return true (heads)
         return result == 0 ? false : true;
     }
-    public static void simulateRound(ArrayList<Contestant> contestants) {
+/*    public static void simulateRound(ArrayList<Contestant> contestants) {
         // Iterate over the contestants and simulate answers
         for (int i = 0; i < contestants.size(); i++) {
             boolean correctAnswer = flipCoin(); // Flip coin to decide if the answer is correct
@@ -84,8 +84,8 @@ class Contestant extends Person{
     public static void main(String[] args) {
         int n = 45000; //add later?
         int rounds = 10000;
-        ArrayList<Contestant> contestants = new ArrayList<>();}
-/* 
+        ArrayList<Contestant> contestants = new ArrayList<>();
+
         // Create and add Contestant objects with names 0123...
         for (int name = 0; name < n; name++) { //I didn't know how to name 45000 people so I used ints
             Contestant con = new Contestant(String.valueOf(name));
