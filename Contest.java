@@ -106,7 +106,7 @@ public class Contest {
             System.out.print(c.getName() + " ");
         }
         
-        //long startTime = System.nanoTime();//start time
+        long startTime = System.nanoTime();//start time
         // Run a series of rounds
         for (int round = 1; round <= rounds; round++) {
             //System.out.println("Round " + round + ":");
@@ -118,8 +118,8 @@ public class Contest {
             //}
             //System.out.println();
         }
-        //long endTime = System.nanoTime();//end time
-        //long elapsedTime = endTime - startTime; // in nanoseconds
+        long endTime = System.nanoTime();//end time
+        long elapsedTime = endTime - startTime; // in nanoseconds
         //System.out.println("\nTime took (in nanoseconds): " + elapsedTime);
 
         // After all rounds, print average positions of each contestant
