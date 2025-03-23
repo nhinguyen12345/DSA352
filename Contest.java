@@ -50,7 +50,7 @@ class Contestant extends Person{
         this.position = 0;
     }
 }
-public class Contest {
+/*public class Contest {
     
     public static boolean flipCoin() {
         // Create a Random object to generate random values
@@ -82,12 +82,12 @@ public class Contest {
         }
     
     public static void main(String[] args) {
-        int n = 8; //add later?
-        int rounds = 12;
+        int n = 45000; //add later?
+        int rounds = 10000;
         ArrayList<Contestant> contestants = new ArrayList<>();
 
-        // Create and add Contestant objects with names A B C D...
-        for (char name = 'A'; name < 'A' + n; name++) { // 'A' to 'J' for 10 contestants
+        // Create and add Contestant objects with names 0123...
+        for (int name = 0; name < n; name++) { //I didn't know how to name 45000 people so I used ints
             Contestant con = new Contestant(String.valueOf(name));
             contestants.add(con);  // Add to the list
         }
@@ -105,25 +105,28 @@ public class Contest {
         for (Contestant c : contestants) {
             System.out.print(c.getName() + " ");
         }
+        long startTime = System.nanoTime();//start time
         // Run a series of rounds
         for (int round = 1; round <= rounds; round++) {
-            System.out.println("Round " + round + ":");
+            //System.out.println("Round " + round + ":");
             simulateRound(contestants); // Simulate the round
             
             // Print positions after the round
-            for (Contestant c : contestants) {
-                System.out.print(c.getName() +  ":" + c.getPosition() + " ; ");
-            }
-            System.out.println();
+            //for (Contestant c : contestants) {
+                //System.out.print(c.getName() +  ":" + c.getPosition() + " ; ");
+            //}
+            //System.out.println();
         }
-
+        long endTime = System.nanoTime();//end time
+        long elapsedTime = endTime - startTime; // in nanoseconds
+        System.out.println("\nTime took (in nanoseconds): " + elapsedTime);
 
         // After all rounds, print average positions of each contestant
         System.out.println("\nAverage positions after " + rounds + " rounds:");
         for (Contestant c : contestants) {
-            System.out.println(c.getName() + ": " + c.getAveragePosition());
+           System.out.println(c.getName() + ": " + c.getAveragePosition());
         }
     }
 }
-
+*/
 
