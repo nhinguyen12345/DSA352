@@ -31,7 +31,7 @@ class Contestant extends Person{
         this.totalPosition = 0;
         this.roundsPlayed = 0;
     }
-    //Getter for podition
+    // Getter for podition
     public int getPosition() {
         return position;
     }
@@ -39,7 +39,7 @@ class Contestant extends Person{
     public void setPosition(int position) {
         this.position = position;
         this.totalPosition += position; // Add current position to total
-        this.roundsPlayed++; // Increment rounds played
+        this.roundsPlayed++; // Increament rounds played
     }
     // Calculate average position
     public double getAveragePosition() {
