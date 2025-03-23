@@ -80,12 +80,12 @@ class Contestant extends Person{
             contestant.setPosition(i); // Set current position in the list
         }
         }
-    
+    */
     public static void main(String[] args) {
         int n = 45000; //add later?
         int rounds = 10000;
-        ArrayList<Contestant> contestants = new ArrayList<>();
-
+        ArrayList<Contestant> contestants = new ArrayList<>();}
+/* 
         // Create and add Contestant objects with names 0123...
         for (int name = 0; name < n; name++) { //I didn't know how to name 45000 people so I used ints
             Contestant con = new Contestant(String.valueOf(name));
