@@ -62,7 +62,7 @@ public class Contest {
         // If the result is 0, return false (tails), otherwise return true (heads)
         return result == 0 ? false : true;
     }
-/*    public static void simulateRound(ArrayList<Contestant> contestants) {
+    public static void simulateRound(ArrayList<Contestant> contestants) {
         // Iterate over the contestants and simulate answers
         for (int i = 0; i < contestants.size(); i++) {
             boolean correctAnswer = flipCoin(); // Flip coin to decide if the answer is correct
@@ -80,7 +80,7 @@ public class Contest {
             contestant.setPosition(i); // Set current position in the list
         }
         }
-    */
+    
     public static void main(String[] args) {
         int n = 45000; //add later?
         int rounds = 10000;
@@ -104,7 +104,8 @@ public class Contest {
         System.out.println("\nPositions after one round:");
         for (Contestant c : contestants) {
             System.out.print(c.getName() + " ");
-        }
+        }}}
+        /* 
         long startTime = System.nanoTime();//start time
         // Run a series of rounds
         for (int round = 1; round <= rounds; round++) {
@@ -127,6 +128,6 @@ public class Contest {
            System.out.println(c.getName() + ": " + c.getAveragePosition());
         }
     }
-}
-*/
+}*/
+
 
