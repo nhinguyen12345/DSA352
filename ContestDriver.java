@@ -36,8 +36,8 @@ public class ContestDriver {
 		// Step 2
 		// Create multiple Contestants and add them to an ArrayList
 		ArrayList<Contestant> contestants = new ArrayList<>();
-        int n = 8; // Number of contestants
-		int rounds = 12;
+        int n = 43; // Number of contestants
+		int rounds = 10000;
 		// Do something simple to get started, but remember, you will need
 		// to generate up to 1,000,000 Contestants	
 		// Generate multiple contestants with names 0, 1, 2, ..., n-1
@@ -62,11 +62,23 @@ public class ContestDriver {
         for (int round = 1; round <= rounds; round++) {
             simulateRound(contestants);
         }
+		long endTime = System.nanoTime(); // End time
+        long elapsedTime = endTime - startTime;
+        System.out.println("Time taken (in nanoseconds): " + elapsedTime);
 		// Repeat Steps 3 and 4 many times to gather data.
 		// You will need to modify the Contestant class so each Contestant
 		// will keep track of its individual statistics. Be smart about how you record its
 		// position at the end of each round.
 		System.out.println("Finished");
-	}
+		// Print average positions after all rounds
+        System.out.println("\nAverage positions after " + rounds + " rounds:");
+        for (Contestant c : contestants) {
+            System.out.println(c.getName() + ": " + c.getAveragePosition());
+        }
 
+        System.out.println("Finished");
+    }
 }
+	
+
+
