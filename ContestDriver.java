@@ -6,6 +6,23 @@ public class ContestDriver {
 		Random rand = new Random();
 		return rand.nextInt(2) == 1; // true for heads, false for tails
 	}
+	// Simulate one round of the contest
+    public static void simulateRound(ArrayList<Contestant> contestants) {
+        for (int i = 0; i < contestants.size(); i++) {
+            boolean correctAnswer = flipCoin();
+            Contestant contestant = contestants.get(i);
+
+            if (correctAnswer) {
+                // Correct answer: Move to the front
+                contestants.add(0, contestants.remove(i));
+            } else {
+                // Incorrect answer: Move to the back
+                contestants.add(contestants.remove(i));
+            }
+            // Update contestant's position after each round
+            contestant.setPosition(i);
+        }
+    }
 	public static void main(String[] args) {
 		System.out.println("Starting Simulation");
 
@@ -32,6 +49,7 @@ public class ContestDriver {
 		// Steps 3 and 4
 		
 		// Play a round
+		simulateRound(contestants);
 		// For each Contestant, flip a coin, then move the Contestant to
 		// one end of the ArrayList or the other.
 		
