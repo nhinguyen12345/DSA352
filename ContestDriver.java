@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.Random;
 public class ContestDriver {
-
+	// Flip a coin to determine if the answer is correct
+	public static boolean flipCoin() {
+		Random rand = new Random();
+		return rand.nextInt(2) == 1; // true for heads, false for tails
+	}
 	public static void main(String[] args) {
 		System.out.println("Starting Simulation");
 
@@ -18,9 +22,15 @@ public class ContestDriver {
         int n = 10; // Number of contestants
 		// Do something simple to get started, but remember, you will need
 		// to generate up to 1,000,000 Contestants	
-		
+		// Generate multiple contestants with names 0, 1, 2, ..., n-1
+        for (int i = 0; i < n; i++) {
+            Contestant con = new Contestant(String.valueOf(i), 18);
+            contestants.add(con);
+        }
+
 		
 		// Steps 3 and 4
+		
 		// Play a round
 		// For each Contestant, flip a coin, then move the Contestant to
 		// one end of the ArrayList or the other.
