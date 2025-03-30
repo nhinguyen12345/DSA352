@@ -36,7 +36,8 @@ public class ContestDriver {
 		// Step 2
 		// Create multiple Contestants and add them to an ArrayList
 		ArrayList<Contestant> contestants = new ArrayList<>();
-        int n = 10; // Number of contestants
+        int n = 8; // Number of contestants
+		int rounds = 12;
 		// Do something simple to get started, but remember, you will need
 		// to generate up to 1,000,000 Contestants	
 		// Generate multiple contestants with names 0, 1, 2, ..., n-1
@@ -50,11 +51,17 @@ public class ContestDriver {
 		
 		// Play a round
 		simulateRound(contestants);
+		
 		// For each Contestant, flip a coin, then move the Contestant to
 		// one end of the ArrayList or the other.
 		
 		
 		// Steps 5 - 7
+		long startTime = System.nanoTime(); // Start time
+
+        for (int round = 1; round <= rounds; round++) {
+            simulateRound(contestants);
+        }
 		// Repeat Steps 3 and 4 many times to gather data.
 		// You will need to modify the Contestant class so each Contestant
 		// will keep track of its individual statistics. Be smart about how you record its
