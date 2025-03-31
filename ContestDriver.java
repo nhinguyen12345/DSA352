@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.LinkedList;
+
 public class ContestDriver {
 	// Flip a coin to determine if the answer is correct
 	public static boolean flipCoin() {
@@ -7,7 +9,7 @@ public class ContestDriver {
 		return rand.nextInt(2) == 1; // true for heads, false for tails
 	}
 	// Simulate one round of the contest
-    public static void simulateRound(ArrayList<Contestant> contestants) {
+    public static void simulateRound( LinkedList<Contestant> contestants) {
         for (int i = 0; i < contestants.size(); i++) {
             boolean correctAnswer = flipCoin();
             Contestant contestant = contestants.get(i);
@@ -35,9 +37,11 @@ public class ContestDriver {
 		
 		// Step 2
 		// Create multiple Contestants and add them to an ArrayList
-		ArrayList<Contestant> contestants = new ArrayList<>();
-        int n = 43; // Number of contestants
-		int rounds = 10000;
+		//ArrayList<Contestant> contestants = new ArrayList<>();
+		// Change from ArrayList to LinkedList
+		LinkedList<Contestant> contestants = new LinkedList<>();
+        int n = 45000; // Number of contestants
+		int rounds = 1000;
 		// Do something simple to get started, but remember, you will need
 		// to generate up to 1,000,000 Contestants	
 		// Generate multiple contestants with names 0, 1, 2, ..., n-1
@@ -71,10 +75,10 @@ public class ContestDriver {
 		// position at the end of each round.
 		System.out.println("Finished");
 		// Print average positions after all rounds
-        System.out.println("\nAverage positions after " + rounds + " rounds:");
-        for (Contestant c : contestants) {
-            System.out.println(c.getName() + ": " + c.getAveragePosition());
-        }
+        //System.out.println("\nAverage positions after " + rounds + " rounds:");
+       // for (Contestant c : contestants) {
+            //System.out.println(c.getName() + ": " + c.getAveragePosition());
+        //}
 
         System.out.println("Finished");
     }
